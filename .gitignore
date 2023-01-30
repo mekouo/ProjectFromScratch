@@ -1,0 +1,17 @@
+# IntelliJ IDEA files
+*.iml
+*.iws
+*.ipr
+
+# Build and output directories
+out/
+target/
+.idea/
+
+# Generated files
+*.class
+*.jar
+
+# Other IntelliJ IDEA files
+*.log
+*.orig
