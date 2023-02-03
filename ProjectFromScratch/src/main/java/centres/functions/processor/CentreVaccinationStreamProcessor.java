@@ -40,7 +40,7 @@ import org.apache.spark.sql.SparkSession;
            centreVaccinationDataset.printSchema();
             centreVaccinationDataset.show(5, false);
 
-            log.info("nb actesDeces = {}", centreVaccinationDataset.count());
+            log.info("nb centrevaccination = {}", centreVaccinationDataset.count());
 
 
             CsvWriter<CentreVaccination> writer = new CsvWriter<>(outputPathStr + "/time=" + ts);
