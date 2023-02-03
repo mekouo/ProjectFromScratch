@@ -5,42 +5,35 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>ProjectFromScratch</artifactId>
+    <artifactId>projectVaccination</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <properties>
-
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-
         <java.version>11</java.version>
-
         <scala.version>2.13.8</scala.version>
         <scala.dep.version>2.13</scala.dep.version>
         <spark.major.version>3.3</spark.major.version>
         <spark.version>3.3.1</spark.version>
-        <hadoop.version>3.3.4</hadoop.version>
         <jackson.version>2.13.4</jackson.version>
 
-        <!--        <scala.version>2.11.12</scala.version>-->
-        <!--        <scala.dep.version>2.11</scala.dep.version>-->
-        <!--        <spark.major.version>3.2</spark.major.version>-->
-        <!--        <spark.version>2.3.0</spark.version>-->
-        <!--        <hadoop.version>3.2.0</hadoop.version>-->
-        <!--        <jackson.version>2.6.7.1</jackson.version>-->
-
+        <hadoop.version>3.3.4</hadoop.version>
         <junit.version>5.7.1</junit.version>
         <assertj.version>3.4.1</assertj.version>
         <spark-extensions.version>2.4.0</spark-extensions.version>
 
         <org.apache.hadoop.scope>compile</org.apache.hadoop.scope>
-        <org.apache.spark.scope>provided</org.apache.spark.scope>
+        <org.apache.spark.scope>compile</org.apache.spark.scope>
+
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <!-- default scope : compile -->
     <dependencies>
-
 
         <!-- Slf4j Logger api -->
         <dependency>
@@ -161,17 +154,23 @@
             <version>${spark-extensions.version}-${spark.major.version}</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- kafka -->
         <dependency>
+
+            <!--KafkaApp -->
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-streaming-kafka-0-10_${scala.dep.version}</artifactId>
             <version>${spark.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
 
 
     </dependencies>
+
 
     <build>
 
@@ -214,4 +213,5 @@
         </plugins>
 
     </build>
+
 </project>

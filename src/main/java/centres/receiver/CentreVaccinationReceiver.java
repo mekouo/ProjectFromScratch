@@ -21,7 +21,6 @@ import java.util.function.Supplier;
 @AllArgsConstructor
 @Builder
 @Slf4j
-@RequiredArgsConstructor
 public class CentreVaccinationReceiver implements Supplier<JavaDStream<CentreVaccination>> {
 
 

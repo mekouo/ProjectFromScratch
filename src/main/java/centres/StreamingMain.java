@@ -2,7 +2,6 @@ package centres;
 
 import centres.functions.processor.CentreVaccinationStreamProcessor;
 import centres.receiver.CentreVaccinationHdfsReceiver;
-import centres.receiver.CentreVaccinationReceiver;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 import lombok.extern.slf4j.Slf4j;
